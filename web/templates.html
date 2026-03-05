@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>108 份专业合同模板大全 - LegalAI</title>
+    <meta name="description" content="108 份专业合同模板，覆盖 8 大类别，单份¥29，全套¥299，立即下载使用">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header - 复用官网样式 */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .nav-links a.active {
+            text-decoration: underline;
+        }
+        
+        .btn {
+            background: white;
+            color: #667eea;
+            padding: 10px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        /* Page Title */
+        .page-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .page-title h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .page-title p {
+            font-size: 20px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Pricing Banner */
+        .pricing-banner {
+            background: white;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 80px;
+            z-index: 99;
+        }
+        
+        .pricing-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .price-item {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .price-item span {
+            font-size: 16px;
+            color: #666;
+            font-weight: normal;
+        }
+        
+        .buy-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .buy-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        /* Categories */
+        .categories {
+            padding: 60px 0;
+        }
+        
+        .category-section {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        
+        .category-header:hover {
+            opacity: 0.9;
+        }
+        
+        .category-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .category-count {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .toggle-icon {
+            font-size: 24px;
+            transition: transform 0.3s;
+        }
+        
+        .category-header.collapsed .toggle-icon {
+            transform: rotate(-90deg);
+        }
+        
+        .category-content {
+            padding: 30px;
+            display: block;
+        }
+        
+        .category-content.hidden {
+            display: none;
+        }
+        
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .template-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s;
+            background: #fafafa;
+        }
+        
+        .template-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .template-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .template-desc {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .template-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .template-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .template-btn {
+            flex: 1;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .btn-preview {
+            background: #f0f0f0;
+            color: #333;
+        }
+        
+        .btn-preview:hover {
+            background: #e0e0e0;
+        }
+        
+        .btn-buy {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-buy:hover {
+            background: #5568d3;
+        }
+        
+        /* GitHub Section */
+        .github-section {
+            background: #24292e;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .github-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .github-section p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .github-btn {
+            background: #2ea44f;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .github-btn:hover {
+            background: #2c974b;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(46, 164, 79, 0.4);
+        }
+        
+        /* Purchase Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #999;
+        }
+        
+        .close-modal:hover {
+            color: #333;
+        }
+        
+        .modal h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+        
+        .qr-codes {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .qr-code {
+            text-align: center;
+        }
+        
+        .qr-placeholder {
+            width: 150px;
+            height: 150px;
+            background: #f0f0f0;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .planet-link {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        
+        .planet-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            opacity: 0.8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 32px;
+            }
+            
+            .pricing-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .template-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">⚖️ LegalAI</div>
+                <div class="nav-links">
+                    <a href="index.html">首页</a>
+                    <a href="index.html#features">功能</a>
+                    <a href="index.html#pricing">价格</a>
+                    <a href="templates.html" class="active">合同模板</a>
+                    <a href="index.html#contact">联系</a>
+                </div>
+                <a href="index.html#contact" class="btn">免费试用</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>📄 108 份专业合同模板大全</h1>
+            <p>覆盖 8 大类别 · 专业律师编写 · 即下即用 · 持续更新</p>
+        </div>
+    </section>
+
+    <!-- Pricing Banner -->
+    <div class="pricing-banner">
+        <div class="container">
+            <div class="pricing-info">
+                <div class="price-item">单份 <span>¥29</span></div>
+                <div class="price-item">全套 8 类 <span>¥299</span> <span style="color: #ff6b6b; font-size: 14px;">(立省¥133)</span></div>
+                <a href="javascript:void(0)" onclick="openModal()" class="buy-btn">🛒 立即购买</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <!-- Category 1: 买卖合同 -->
+            <div class="category-section">
+                <div class="category-header" onclick="toggleCategory(this)">
+                    <div>
+                        <span class="category-title">🛒 买卖合同类</span>
+                        <span class="category-count">15 份模板</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="category-content">
+                    <div class="template-grid">
+                        <div class="template-card">
+                            <div class="template-name">商品买卖合同</div>
+                            <div class="template-desc">适用于一般商品买卖交易，包含质量标准、交付方式、付款条款等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-name">房屋买卖合同</div>
+                            <div class="template-desc">二手房/新房买卖通用，包含产权过户、税费承担、违约责任等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-name">车辆买卖合同</div>
+                            <div class="template-desc">机动车买卖专用，包含车况说明、过户手续、质量保证等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-name">设备买卖合同</div>
+                            <div class="template-desc">工业设备/机械设备买卖，包含安装调试、保修条款等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2: 租赁合同 -->
+            <div class="category-section">
+                <div class="category-header" onclick="toggleCategory(this)">
+                    <div>
+                        <span class="category-title">🏠 租赁合同类</span>
+                        <span class="category-count">12 份模板</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="category-content">
+                    <div class="template-grid">
+                        <div class="template-card">
+                            <div class="template-name">房屋租赁合同</div>
+                            <div class="template-desc">住宅/商铺租赁通用，包含租金支付、押金、维修责任等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-name">场地租赁合同</div>
+                            <div class="template-desc">办公场地/仓库/厂房租赁，包含用途限制、装修条款等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-name">设备租赁合同</div>
+                            <div class="template-desc">机械设备/办公设备租赁，包含使用规范、维护责任等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: 劳动合同 -->
+            <div class="category-section">
+                <div class="category-header" onclick="toggleCategory(this)">
+                    <div>
+                        <span class="category-title">👥 劳动合同类</span>
+                        <span class="category-count">14 份模板</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="category-content">
+                    <div class="template-grid">
+                        <div class="template-card">
+                            <div class="template-name">劳动合同书</div>
+                            <div class="template-desc">标准劳动合同，包含工作内容、薪酬福利、保密条款等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-name">劳务合同</div>
+                            <div class="template-desc">临时性/项目性劳务合作，包含服务内容、报酬结算等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-name">保密协议</div>
+                            <div class="template-desc">员工保密协议，包含保密范围、期限、违约责任等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-name">竞业限制协议</div>
+                            <div class="template-desc">离职后竞业限制，包含限制范围、补偿标准等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 4: 合作协议 -->
+            <div class="category-section">
+                <div class="category-header" onclick="toggleCategory(this)">
+                    <div>
+                        <span class="category-title">🤝 合作协议类</span>
+                        <span class="category-count">16 份模板</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="category-content">
+                    <div class="template-grid">
+                        <div class="template-card">
+                            <div class="template-name">战略合作协议</div>
+                            <div class="template-desc">企业间战略合作框架，包含合作内容、权利义务等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-name">项目合作协议</div>
+                            <div class="template-desc">特定项目合作，包含投资比例、收益分配、退出机制等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-name">代理合作协议</div>
+                            <div class="template-desc">产品/服务代理，包含代理区域、销售目标、佣金等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 5: 投资协议 -->
+            <div class="category-section">
+                <div class="category-header" onclick="toggleCategory(this)">
+                    <div>
+                        <span class="category-title">💰 投资协议类</span>
+                        <span class="category-count">13 份模板</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="category-content">
+                    <div class="template-grid">
+                        <div class="template-card">
+                            <div class="template-name">股权投资协议</div>
+                            <div class="template-desc">公司股权投资，包含估值、股权比例、治理结构等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-name">增资协议</div>
+                            <div class="template-desc">公司增资扩股，包含认购价格、支付方式、工商变更等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-name">对赌协议</div>
+                            <div class="template-desc">业绩对赌条款，包含对赌目标、补偿机制、回购条款等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 6: 知识产权 -->
+            <div class="category-section">
+                <div class="category-header" onclick="toggleCategory(this)">
+                    <div>
+                        <span class="category-title">💡 知识产权类</span>
+                        <span class="category-count">12 份模板</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="category-content">
+                    <div class="template-grid">
+                        <div class="template-card">
+                            <div class="template-name">专利许可合同</div>
+                            <div class="template-desc">专利技术许可使用，包含许可范围、使用费、期限等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-name">商标转让合同</div>
+                            <div class="template-desc">商标权转让，包含转让价格、过户手续、权利保证等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-name">软件著作权许可合同</div>
+                            <div class="template-desc">软件版权许可，包含使用范围、源代码交付、升级维护等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 7: 服务合同 -->
+            <div class="category-section">
+                <div class="category-header" onclick="toggleCategory(this)">
+                    <div>
+                        <span class="category-title">🛠️ 服务合同类</span>
+                        <span class="category-count">14 份模板</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="category-content">
+                    <div class="template-grid">
+                        <div class="template-card">
+                            <div class="template-name">技术服务合同</div>
+                            <div class="template-desc">技术开发/咨询/服务，包含服务内容、交付标准、验收等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-name">咨询服务合同</div>
+                            <div class="template-desc">专业咨询服务，包含服务范围、报告交付、费用结算等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-name">居间服务合同</div>
+                            <div class="template-desc">中介居间服务，包含居间内容、佣金标准、支付方式等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 8: 其他合同 -->
+            <div class="category-section">
+                <div class="category-header" onclick="toggleCategory(this)">
+                    <div>
+                        <span class="category-title">📋 其他合同类</span>
+                        <span class="category-count">12 份模板</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="category-content">
+                    <div class="template-grid">
+                        <div class="template-card">
+                            <div class="template-name">借款合同</div>
+                            <div class="template-desc">民间借贷/企业借款，包含借款金额、利率、还款方式等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-name">担保合同</div>
+                            <div class="template-desc">保证/抵押/质押担保，包含担保范围、期限、责任等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-name">赠与合同</div>
+                            <div class="template-desc">财产赠与，包含赠与财产、交付方式、撤销条件等</div>
+                            <div class="template-price">¥29</div>
+                            <div class="template-actions">
+                                <a href="#" class="template-btn btn-preview" onclick="alert('预览功能开发中')">预览</a>
+                                <a href="javascript:void(0)" onclick="openModal()" class="template-btn btn-buy">购买</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Section -->
+    <section class="github-section">
+        <div class="container">
+            <h2>🎁 免费预览部分模板</h2>
+            <p>访问我们的 GitHub 仓库，免费预览和下载部分合同模板</p>
+            <a href="https://github.com/your-repo/legal-templates" target="_blank" class="github-btn">
+                🐙 访问 GitHub 仓库
+            </a>
+        </div>
+    </section>
+
+    <!-- Purchase Modal -->
+    <div id="purchaseModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h3>选择购买方式</h3>
+            <p style="color: #666; margin-bottom: 20px;">扫码支付后，模板将自动发送至您的邮箱</p>
+            
+            <div class="qr-codes">
+                <div class="qr-code">
+                    <div class="qr-placeholder">
+                        <div>
+                            <div style="font-size: 40px;">💚</div>
+                            <div>微信支付二维码</div>
+                        </div>
+                    </div>
+                    <div>微信支付</div>
+                </div>
+                <div class="qr-code">
+                    <div class="qr-placeholder">
+                        <div>
+                            <div style="font-size: 40px;">💙</div>
+                            <div>支付宝二维码</div>
+                        </div>
+                    </div>
+                    <div>支付宝</div>
+                </div>
+            </div>
+            
+            <p style="color: #999; font-size: 14px;">或加入知识星球获取全部模板 + 持续更新</p>
+            <a href="#" class="planet-link">🌟 加入知识星球 ¥299</a>
+            
+            <p style="margin-top: 30px; color: #666; font-size: 14px;">
+                客服微信：待添加 | 邮箱：431819350@qq.com
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 LegalAI - 智能合同审阅系统</p>
+            <p style="margin-top: 10px; font-size: 14px;">108 份专业合同模板 · 持续更新</p>
+            <p style="margin-top: 10px; font-size: 14px;">
+                <a href="index.html" style="color: white; text-decoration: none;">返回首页</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle category expand/collapse
+        function toggleCategory(header) {
+            const content = header.nextElementSibling;
+            header.classList.toggle('collapsed');
+            content.classList.toggle('hidden');
+        }
+
+        // Modal functions
+        function openModal() {
+            document.getElementById('purchaseModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('purchaseModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('purchaseModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
