@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redline 报告 - 技术服务合同</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #7f8c8d;
+        }
+        .summary-box {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid #3498db;
+        }
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        .risk-critical { border-left-color: #e74c3c; }
+        .risk-high { border-left-color: #e67e22; }
+        .risk-medium { border-left-color: #f1c40f; }
+        .risk-low { border-left-color: #27ae60; }
+        .clause-card {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .clause-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .clause-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .risk-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+        .badge-critical { background: #e74c3c; }
+        .badge-high { background: #e67e22; }
+        .badge-medium { background: #f1c40f; color: #333; }
+        .badge-low { background: #27ae60; }
+        .suggestion-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .suggestion-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .suggestion-level {
+            font-size: 12px;
+            padding: 2px 8px;
+            background: #3498db;
+            color: white;
+            border-radius: 4px;
+        }
+        .original-text {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            border-left: 3px solid #ffc107;
+        }
+        .suggested-text {
+            background: #d4edda;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            border-left: 3px solid #28a745;
+        }
+        .rationale {
+            background: #e7f3ff;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        .legal-basis {
+            font-size: 13px;
+            color: #666;
+            margin-top: 10px;
+        }
+        .market-benchmark {
+            font-size: 13px;
+            color: #666;
+            margin-top: 5px;
+        }
+        .confidence-bar {
+            width: 100px;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            display: inline-block;
+            overflow: hidden;
+        }
+        .confidence-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #e74c3c, #f1c40f, #27ae60);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #999;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Redline 审阅报告</h1>
+        
+        <div class="summary-box">
+            <h2>📄 合同信息</h2>
+            <p><strong>合同名称：</strong>技术服务合同</p>
+            <p><strong>报告编号：</strong>8045dd27-535</p>
+            <p><strong>生成时间：</strong>2026年03月06日 05:28</p>
+        </div>
+        
+        <h2>📊 统计概览</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">6</div>
+                <div class="stat-label">总建议数</div>
+            </div>
+            <div class="stat-card risk-critical">
+                <div class="stat-value">0</div>
+                <div class="stat-label">严重风险</div>
+            </div>
+            <div class="stat-card risk-high">
+                <div class="stat-value">6</div>
+                <div class="stat-label">高风险</div>
+            </div>
+            <div class="stat-card risk-medium">
+                <div class="stat-value">0</div>
+                <div class="stat-label">中风险</div>
+            </div>
+            <div class="stat-card risk-low">
+                <div class="stat-value">0</div>
+                <div class="stat-label">低风险</div>
+            </div>
+            <div class="stat-card" style="border-left-color: #9b59b6;">
+                <div class="stat-value">6</div>
+                <div class="stat-label">L4 级建议</div>
+            </div>
+            <div class="stat-card" style="border-left-color: #1abc9c;">
+                <div class="stat-value">100.0%</div>
+                <div class="stat-label">L4 占比</div>
+            </div>
+        </div>
+        
+        <h2>📝 执行摘要</h2>
+        <div class="summary-box">
+            <p>本合同共发现 6 处风险点，6 处为高风险（强烈建议修改）。 已生成 6 条 L4 级智能修改建议（含法律依据和市场基准），可直接采用。</p>
+        </div>
+        
+        <h2>⚠️ 整体风险评估</h2>
+        <div class="summary-box" style="border-left: 4px solid #e67e22;">
+            <p>高风险：发现 6 处高风险条款，建议与对方协商修改后再签署。</p>
+        </div>
+        
+        <h2>💡 关键建议 (Top 5)</h2>
+        <ol>
+            <li>【高】原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益...</li>
+            <li>【高】原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益...</li>
+            <li>【高】原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益...</li>
+            <li>【高】原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益...</li>
+            <li>【高】原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益...</li>
+        </ol>
+        
+        <h2>📑 条款级 Redline 详情</h2>
+
+        <div class="clause-card">
+            <div class="clause-header">
+                <span class="clause-title">技术服务合同</span>
+                <span class="risk-badge badge-high">高</span>
+            </div>
+            
+            <div class="original-text">
+                <strong>原文：</strong><br>
+                甲方：北京科技有限公司
+        乙方：上海技术服务中心
+        
+        第一条 服务内容
+        乙方为甲方提供技术开发服务。
+        
+        第二条 费用支付
+        甲方应在合同签订后 30 日内支付全部费用。
+        
+        第三条 价格调整
+        乙方有权根据市场情况随时调整服务价格，无需通知甲方。
+        
+        第四条 知识产权
+        服务过程中产生的所有知识产权归乙方所有。
+        
+        第五条 违约责任
+        甲方违约需承担无限连带责任，赔偿乙方一切损失。
+        
+        第六条 合同解除
+        乙方可随时解除本合同，无需承担任何责任。
+        
+        第七条 争议解决
+        本合同最终解释权归乙方所有。
+            </div>
+            
+            <div class="suggested-text"><strong>修改后：</strong><br>甲方：北京科技有限公司
+        乙方：上海技术服务中心
+        
+        第一条 服务内容
+        乙方为甲方提供技术开发服务。
+        
+        第二条 费用支付
+        甲方应在合同签订后 30 日内支付全部费用。
+        
+        第三条 价格调整
+        乙方有权根据市场情况随时调整服务价格，无需通知甲方。
+        
+        第四条 知识产权
+        服务过程中产生的所有知识产权归乙方所有。
+        
+        第五条 违约责任
+        甲方违约需承担无限连带责任，赔偿乙方一切损失。
+        
+        第六条 合同解除
+        乙方可随时解除本合同，无需承担任何责任。
+        
+        第七条 争议解决
+        本合同最终解释权归乙方所有。</div>
+
+            <div class="suggestion-card">
+                <div class="suggestion-header">
+                    <span><strong>建议 47f8529f</strong> - 修改</span>
+                    <span class="suggestion-level">L4-智能 Redline</span>
+                </div>
+                
+                <div class="original-text">
+                    <strong>❌ 原文：</strong><br>
+                    技术服务合同 甲方：北京科技有限公司
+        乙方：上海技术服务中心
+        
+        第一条 服务内容
+        乙方为甲方提供技术开发服务。
+        
+        第二条 费用支付
+        甲方应在合同签订后 30 日内支付全部费用。
+        
+        第三条 价格调整
+        乙方有权根据市场情况随时调整服务价格，无需通知甲方。
+        
+        第四条 知识产权
+        服务过程中产生的所有知识产权归乙方所有。
+        
+        第五条 违约责任
+        甲方违约需承担无限连带责任，赔偿乙方一切损失。
+        
+        第六条 合同解除
+        乙方可随时解除本合同，无需承担任何责任。
+        
+        第七条 争议解决
+        本合同最终解释权归乙方所有。
+                </div>
+                
+                <div class="suggested-text">
+                    <strong>✅ 建议修改为：</strong><br>
+                    建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。
+                </div>
+                
+                <div class="rationale">
+                    <strong>📖 修改理由：</strong><br>
+                    原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益
+                </div>
+                
+                <div style="margin-top: 10px; font-size: 13px;">
+                    <strong>置信度：</strong>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 75.0%"></div>
+                    </div>
+                    75%
+                    
+                    <strong style="margin-left: 20px;">预计采纳率：</strong>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 85.0%"></div>
+                    </div>
+                    85%
+                </div>
+                <div class="legal-basis">
+                    <strong>⚖️ 法律依据：</strong><br>
+                    • 《中华人民共和国民法典》第 543 条：当事人协商一致，可以变更合同。<br>
+                    • 《中华人民共和国民法典》第 496 条：格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。<br>
+                </div>
+                <div class="market-benchmark">
+                    <strong>📊 市场基准：</strong>遵循公平原则，保障双方合法权益（采用率：75%）
+                </div>
+            </div>
+
+            <div class="suggestion-card">
+                <div class="suggestion-header">
+                    <span><strong>建议 87850d57</strong> - 修改</span>
+                    <span class="suggestion-level">L4-智能 Redline</span>
+                </div>
+                
+                <div class="original-text">
+                    <strong>❌ 原文：</strong><br>
+                    技术服务合同 甲方：北京科技有限公司
+        乙方：上海技术服务中心
+        
+        第一条 服务内容
+        乙方为甲方提供技术开发服务。
+        
+        第二条 费用支付
+        甲方应在合同签订后 30 日内支付全部费用。
+        
+        第三条 价格调整
+        乙方有权根据市场情况随时调整服务价格，无需通知甲方。
+        
+        第四条 知识产权
+        服务过程中产生的所有知识产权归乙方所有。
+        
+        第五条 违约责任
+        甲方违约需承担无限连带责任，赔偿乙方一切损失。
+        
+        第六条 合同解除
+        乙方可随时解除本合同，无需承担任何责任。
+        
+        第七条 争议解决
+        本合同最终解释权归乙方所有。
+                </div>
+                
+                <div class="suggested-text">
+                    <strong>✅ 建议修改为：</strong><br>
+                    建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。
+                </div>
+                
+                <div class="rationale">
+                    <strong>📖 修改理由：</strong><br>
+                    原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益
+                </div>
+                
+                <div style="margin-top: 10px; font-size: 13px;">
+                    <strong>置信度：</strong>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 80.0%"></div>
+                    </div>
+                    80%
+                    
+                    <strong style="margin-left: 20px;">预计采纳率：</strong>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 86.0%"></div>
+                    </div>
+                    86%
+                </div>
+                <div class="legal-basis">
+                    <strong>⚖️ 法律依据：</strong><br>
+                    • 《中华人民共和国民法典》第 543 条：当事人协商一致，可以变更合同。<br>
+                    • 《中华人民共和国民法典》第 496 条：格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。<br>
+                </div>
+                <div class="market-benchmark">
+                    <strong>📊 市场基准：</strong>遵循公平原则，保障双方合法权益（采用率：75%）
+                </div>
+            </div>
+
+            <div class="suggestion-card">
+                <div class="suggestion-header">
+                    <span><strong>建议 b2889e39</strong> - 修改</span>
+                    <span class="suggestion-level">L4-智能 Redline</span>
+                </div>
+                
+                <div class="original-text">
+                    <strong>❌ 原文：</strong><br>
+                    技术服务合同 甲方：北京科技有限公司
+        乙方：上海技术服务中心
+        
+        第一条 服务内容
+        乙方为甲方提供技术开发服务。
+        
+        第二条 费用支付
+        甲方应在合同签订后 30 日内支付全部费用。
+        
+        第三条 价格调整
+        乙方有权根据市场情况随时调整服务价格，无需通知甲方。
+        
+        第四条 知识产权
+        服务过程中产生的所有知识产权归乙方所有。
+        
+        第五条 违约责任
+        甲方违约需承担无限连带责任，赔偿乙方一切损失。
+        
+        第六条 合同解除
+        乙方可随时解除本合同，无需承担任何责任。
+        
+        第七条 争议解决
+        本合同最终解释权归乙方所有。
+                </div>
+                
+                <div class="suggested-text">
+                    <strong>✅ 建议修改为：</strong><br>
+                    建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。
+                </div>
+                
+                <div class="rationale">
+                    <strong>📖 修改理由：</strong><br>
+                    原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益
+                </div>
+                
+                <div style="margin-top: 10px; font-size: 13px;">
+                    <strong>置信度：</strong>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 70.0%"></div>
+                    </div>
+                    70%
+                    
+                    <strong style="margin-left: 20px;">预计采纳率：</strong>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 84.0%"></div>
+                    </div>
+                    84%
+                </div>
+                <div class="legal-basis">
+                    <strong>⚖️ 法律依据：</strong><br>
+                    • 《中华人民共和国民法典》第 543 条：当事人协商一致，可以变更合同。<br>
+                    • 《中华人民共和国民法典》第 496 条：格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。<br>
+                </div>
+                <div class="market-benchmark">
+                    <strong>📊 市场基准：</strong>遵循公平原则，保障双方合法权益（采用率：75%）
+                </div>
+            </div>
+
+            <div class="suggestion-card">
+                <div class="suggestion-header">
+                    <span><strong>建议 64bcb8ba</strong> - 修改</span>
+                    <span class="suggestion-level">L4-智能 Redline</span>
+                </div>
+                
+                <div class="original-text">
+                    <strong>❌ 原文：</strong><br>
+                    技术服务合同 甲方：北京科技有限公司
+        乙方：上海技术服务中心
+        
+        第一条 服务内容
+        乙方为甲方提供技术开发服务。
+        
+        第二条 费用支付
+        甲方应在合同签订后 30 日内支付全部费用。
+        
+        第三条 价格调整
+        乙方有权根据市场情况随时调整服务价格，无需通知甲方。
+        
+        第四条 知识产权
+        服务过程中产生的所有知识产权归乙方所有。
+        
+        第五条 违约责任
+        甲方违约需承担无限连带责任，赔偿乙方一切损失。
+        
+        第六条 合同解除
+        乙方可随时解除本合同，无需承担任何责任。
+        
+        第七条 争议解决
+        本合同最终解释权归乙方所有。
+                </div>
+                
+                <div class="suggested-text">
+                    <strong>✅ 建议修改为：</strong><br>
+                    建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。
+                </div>
+                
+                <div class="rationale">
+                    <strong>📖 修改理由：</strong><br>
+                    原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益
+                </div>
+                
+                <div style="margin-top: 10px; font-size: 13px;">
+                    <strong>置信度：</strong>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 70.0%"></div>
+                    </div>
+                    70%
+                    
+                    <strong style="margin-left: 20px;">预计采纳率：</strong>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 84.0%"></div>
+                    </div>
+                    84%
+                </div>
+                <div class="legal-basis">
+                    <strong>⚖️ 法律依据：</strong><br>
+                    • 《中华人民共和国民法典》第 543 条：当事人协商一致，可以变更合同。<br>
+                    • 《中华人民共和国民法典》第 496 条：格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。<br>
+                </div>
+                <div class="market-benchmark">
+                    <strong>📊 市场基准：</strong>遵循公平原则，保障双方合法权益（采用率：75%）
+                </div>
+            </div>
+
+            <div class="suggestion-card">
+                <div class="suggestion-header">
+                    <span><strong>建议 9cfb2244</strong> - 修改</span>
+                    <span class="suggestion-level">L4-智能 Redline</span>
+                </div>
+                
+                <div class="original-text">
+                    <strong>❌ 原文：</strong><br>
+                    技术服务合同 甲方：北京科技有限公司
+        乙方：上海技术服务中心
+        
+        第一条 服务内容
+        乙方为甲方提供技术开发服务。
+        
+        第二条 费用支付
+        甲方应在合同签订后 30 日内支付全部费用。
+        
+        第三条 价格调整
+        乙方有权根据市场情况随时调整服务价格，无需通知甲方。
+        
+        第四条 知识产权
+        服务过程中产生的所有知识产权归乙方所有。
+        
+        第五条 违约责任
+        甲方违约需承担无限连带责任，赔偿乙方一切损失。
+        
+        第六条 合同解除
+        乙方可随时解除本合同，无需承担任何责任。
+        
+        第七条 争议解决
+        本合同最终解释权归乙方所有。
+                </div>
+                
+                <div class="suggested-text">
+                    <strong>✅ 建议修改为：</strong><br>
+                    建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。
+                </div>
+                
+                <div class="rationale">
+                    <strong>📖 修改理由：</strong><br>
+                    原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益
+                </div>
+                
+                <div style="margin-top: 10px; font-size: 13px;">
+                    <strong>置信度：</strong>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 70.0%"></div>
+                    </div>
+                    70%
+                    
+                    <strong style="margin-left: 20px;">预计采纳率：</strong>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 84.0%"></div>
+                    </div>
+                    84%
+                </div>
+                <div class="legal-basis">
+                    <strong>⚖️ 法律依据：</strong><br>
+                    • 《中华人民共和国民法典》第 543 条：当事人协商一致，可以变更合同。<br>
+                    • 《中华人民共和国民法典》第 496 条：格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。<br>
+                </div>
+                <div class="market-benchmark">
+                    <strong>📊 市场基准：</strong>遵循公平原则，保障双方合法权益（采用率：75%）
+                </div>
+            </div>
+
+            <div class="suggestion-card">
+                <div class="suggestion-header">
+                    <span><strong>建议 e3529584</strong> - 修改</span>
+                    <span class="suggestion-level">L4-智能 Redline</span>
+                </div>
+                
+                <div class="original-text">
+                    <strong>❌ 原文：</strong><br>
+                    技术服务合同 甲方：北京科技有限公司
+        乙方：上海技术服务中心
+        
+        第一条 服务内容
+        乙方为甲方提供技术开发服务。
+        
+        第二条 费用支付
+        甲方应在合同签订后 30 日内支付全部费用。
+        
+        第三条 价格调整
+        乙方有权根据市场情况随时调整服务价格，无需通知甲方。
+        
+        第四条 知识产权
+        服务过程中产生的所有知识产权归乙方所有。
+        
+        第五条 违约责任
+        甲方违约需承担无限连带责任，赔偿乙方一切损失。
+        
+        第六条 合同解除
+        乙方可随时解除本合同，无需承担任何责任。
+        
+        第七条 争议解决
+        本合同最终解释权归乙方所有。
+                </div>
+                
+                <div class="suggested-text">
+                    <strong>✅ 建议修改为：</strong><br>
+                    建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。
+                </div>
+                
+                <div class="rationale">
+                    <strong>📖 修改理由：</strong><br>
+                    原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益
+                </div>
+                
+                <div style="margin-top: 10px; font-size: 13px;">
+                    <strong>置信度：</strong>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 70.0%"></div>
+                    </div>
+                    70%
+                    
+                    <strong style="margin-left: 20px;">预计采纳率：</strong>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 84.0%"></div>
+                    </div>
+                    84%
+                </div>
+                <div class="legal-basis">
+                    <strong>⚖️ 法律依据：</strong><br>
+                    • 《中华人民共和国民法典》第 543 条：当事人协商一致，可以变更合同。<br>
+                    • 《中华人民共和国民法典》第 496 条：格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。<br>
+                </div>
+                <div class="market-benchmark">
+                    <strong>📊 市场基准：</strong>遵循公平原则，保障双方合法权益（采用率：75%）
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>本报告由 LegalAI 智能 Redline 系统自动生成 | 生成时间：2026-03-06 05:28:09</p>
+            <p>注意：本报告仅供参考，不构成法律意见。重大合同请咨询专业律师。</p>
+        </div>
+    </div>
+</body>
+</html>

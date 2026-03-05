@@ -1,0 +1,593 @@
+{
+  "report_id": "8045dd27-535",
+  "contract_id": "3430df18-55c",
+  "contract_name": "技术服务合同",
+  "generated_at": "2026-03-06T05:28:09.425007",
+  "total_suggestions": 6,
+  "suggestions_by_level": {
+    "L4-智能 Redline": 6
+  },
+  "suggestions_by_priority": {
+    "高": 6
+  },
+  "clause_redlines": [
+    {
+      "clause_id": "8b8538dc",
+      "clause_title": "技术服务合同",
+      "clause_content": "甲方：北京科技有限公司\n        乙方：上海技术服务中心\n        \n        第一条 服务内容\n        乙方为甲方提供技术开发服务。\n        \n        第二条 费用支付\n        甲方应在合同签订后 30 日内支付全部费用。\n        \n        第三条 价格调整\n        乙方有权根据市场情况随时调整服务价格，无需通知甲方。\n        \n        第四条 知识产权\n        服务过程中产生的所有知识产权归乙方所有。\n        \n        第五条 违约责任\n        甲方违约需承担无限连带责任，赔偿乙方一切损失。\n        \n        第六条 合同解除\n        乙方可随时解除本合同，无需承担任何责任。\n        \n        第七条 争议解决\n        本合同最终解释权归乙方所有。",
+      "suggestions": [
+        {
+          "suggestion_id": "47f8529f",
+          "risk_point_id": "746db2be",
+          "original_text": "技术服务合同 甲方：北京科技有限公司\n        乙方：上海技术服务中心\n        \n        第一条 服务内容\n        乙方为甲方提供技术开发服务。\n        \n        第二条 费用支付\n        甲方应在合同签订后 30 日内支付全部费用。\n        \n        第三条 价格调整\n        乙方有权根据市场情况随时调整服务价格，无需通知甲方。\n        \n        第四条 知识产权\n        服务过程中产生的所有知识产权归乙方所有。\n        \n        第五条 违约责任\n        甲方违约需承担无限连带责任，赔偿乙方一切损失。\n        \n        第六条 合同解除\n        乙方可随时解除本合同，无需承担任何责任。\n        \n        第七条 争议解决\n        本合同最终解释权归乙方所有。",
+          "suggested_text": "建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。",
+          "redline_type": "修改",
+          "level": "L4-智能 Redline",
+          "rationale": "原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益",
+          "legal_basis": [
+            {
+              "law_name": "《中华人民共和国民法典》",
+              "article": "第 543 条",
+              "content": "当事人协商一致，可以变更合同。",
+              "relevance": "合同变更需经双方协商一致，单方变更权违反该规定"
+            },
+            {
+              "law_name": "《中华人民共和国民法典》",
+              "article": "第 496 条",
+              "content": "格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。",
+              "relevance": "单方变更权条款可能构成无效格式条款"
+            }
+          ],
+          "market_benchmark": {
+            "industry": "通用",
+            "clause_type": "单方变更权",
+            "standard_practice": "遵循公平原则，保障双方合法权益",
+            "adoption_rate": 0.75,
+            "sample_clauses": []
+          },
+          "annotations": [
+            {
+              "start_pos": 0,
+              "end_pos": 422,
+              "annotation_type": "highlight",
+              "color": "yellow",
+              "comment": "建议修改"
+            }
+          ],
+          "confidence": 0.75,
+          "adoption_probability": 0.85,
+          "priority": "高",
+          "tags": [
+            "单方变更权"
+          ],
+          "created_at": "2026-03-06T05:28:09.424787"
+        },
+        {
+          "suggestion_id": "87850d57",
+          "risk_point_id": "9ab0a643",
+          "original_text": "技术服务合同 甲方：北京科技有限公司\n        乙方：上海技术服务中心\n        \n        第一条 服务内容\n        乙方为甲方提供技术开发服务。\n        \n        第二条 费用支付\n        甲方应在合同签订后 30 日内支付全部费用。\n        \n        第三条 价格调整\n        乙方有权根据市场情况随时调整服务价格，无需通知甲方。\n        \n        第四条 知识产权\n        服务过程中产生的所有知识产权归乙方所有。\n        \n        第五条 违约责任\n        甲方违约需承担无限连带责任，赔偿乙方一切损失。\n        \n        第六条 合同解除\n        乙方可随时解除本合同，无需承担任何责任。\n        \n        第七条 争议解决\n        本合同最终解释权归乙方所有。",
+          "suggested_text": "建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。",
+          "redline_type": "修改",
+          "level": "L4-智能 Redline",
+          "rationale": "原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益",
+          "legal_basis": [
+            {
+              "law_name": "《中华人民共和国民法典》",
+              "article": "第 543 条",
+              "content": "当事人协商一致，可以变更合同。",
+              "relevance": "合同变更需经双方协商一致，单方变更权违反该规定"
+            },
+            {
+              "law_name": "《中华人民共和国民法典》",
+              "article": "第 496 条",
+              "content": "格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。",
+              "relevance": "单方变更权条款可能构成无效格式条款"
+            }
+          ],
+          "market_benchmark": {
+            "industry": "通用",
+            "clause_type": "单方变更权",
+            "standard_practice": "遵循公平原则，保障双方合法权益",
+            "adoption_rate": 0.75,
+            "sample_clauses": []
+          },
+          "annotations": [
+            {
+              "start_pos": 0,
+              "end_pos": 422,
+              "annotation_type": "highlight",
+              "color": "yellow",
+              "comment": "建议修改"
+            }
+          ],
+          "confidence": 0.7999999999999999,
+          "adoption_probability": 0.86,
+          "priority": "高",
+          "tags": [
+            "单方变更权"
+          ],
+          "created_at": "2026-03-06T05:28:09.424826"
+        },
+        {
+          "suggestion_id": "b2889e39",
+          "risk_point_id": "2eb6e9fb",
+          "original_text": "技术服务合同 甲方：北京科技有限公司\n        乙方：上海技术服务中心\n        \n        第一条 服务内容\n        乙方为甲方提供技术开发服务。\n        \n        第二条 费用支付\n        甲方应在合同签订后 30 日内支付全部费用。\n        \n        第三条 价格调整\n        乙方有权根据市场情况随时调整服务价格，无需通知甲方。\n        \n        第四条 知识产权\n        服务过程中产生的所有知识产权归乙方所有。\n        \n        第五条 违约责任\n        甲方违约需承担无限连带责任，赔偿乙方一切损失。\n        \n        第六条 合同解除\n        乙方可随时解除本合同，无需承担任何责任。\n        \n        第七条 争议解决\n        本合同最终解释权归乙方所有。",
+          "suggested_text": "建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。",
+          "redline_type": "修改",
+          "level": "L4-智能 Redline",
+          "rationale": "原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益",
+          "legal_basis": [
+            {
+              "law_name": "《中华人民共和国民法典》",
+              "article": "第 543 条",
+              "content": "当事人协商一致，可以变更合同。",
+              "relevance": "合同变更需经双方协商一致，单方变更权违反该规定"
+            },
+            {
+              "law_name": "《中华人民共和国民法典》",
+              "article": "第 496 条",
+              "content": "格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。",
+              "relevance": "单方变更权条款可能构成无效格式条款"
+            }
+          ],
+          "market_benchmark": {
+            "industry": "通用",
+            "clause_type": "单方变更权",
+            "standard_practice": "遵循公平原则，保障双方合法权益",
+            "adoption_rate": 0.75,
+            "sample_clauses": []
+          },
+          "annotations": [
+            {
+              "start_pos": 0,
+              "end_pos": 422,
+              "annotation_type": "highlight",
+              "color": "yellow",
+              "comment": "建议修改"
+            }
+          ],
+          "confidence": 0.7,
+          "adoption_probability": 0.84,
+          "priority": "高",
+          "tags": [
+            "单方变更权"
+          ],
+          "created_at": "2026-03-06T05:28:09.424859"
+        },
+        {
+          "suggestion_id": "64bcb8ba",
+          "risk_point_id": "410684d7",
+          "original_text": "技术服务合同 甲方：北京科技有限公司\n        乙方：上海技术服务中心\n        \n        第一条 服务内容\n        乙方为甲方提供技术开发服务。\n        \n        第二条 费用支付\n        甲方应在合同签订后 30 日内支付全部费用。\n        \n        第三条 价格调整\n        乙方有权根据市场情况随时调整服务价格，无需通知甲方。\n        \n        第四条 知识产权\n        服务过程中产生的所有知识产权归乙方所有。\n        \n        第五条 违约责任\n        甲方违约需承担无限连带责任，赔偿乙方一切损失。\n        \n        第六条 合同解除\n        乙方可随时解除本合同，无需承担任何责任。\n        \n        第七条 争议解决\n        本合同最终解释权归乙方所有。",
+          "suggested_text": "建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。",
+          "redline_type": "修改",
+          "level": "L4-智能 Redline",
+          "rationale": "原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益",
+          "legal_basis": [
+            {
+              "law_name": "《中华人民共和国民法典》",
+              "article": "第 543 条",
+              "content": "当事人协商一致，可以变更合同。",
+              "relevance": "合同变更需经双方协商一致，单方变更权违反该规定"
+            },
+            {
+              "law_name": "《中华人民共和国民法典》",
+              "article": "第 496 条",
+              "content": "格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。",
+              "relevance": "单方变更权条款可能构成无效格式条款"
+            }
+          ],
+          "market_benchmark": {
+            "industry": "通用",
+            "clause_type": "单方变更权",
+            "standard_practice": "遵循公平原则，保障双方合法权益",
+            "adoption_rate": 0.75,
+            "sample_clauses": []
+          },
+          "annotations": [
+            {
+              "start_pos": 0,
+              "end_pos": 422,
+              "annotation_type": "highlight",
+              "color": "yellow",
+              "comment": "建议修改"
+            }
+          ],
+          "confidence": 0.7,
+          "adoption_probability": 0.84,
+          "priority": "高",
+          "tags": [
+            "单方变更权"
+          ],
+          "created_at": "2026-03-06T05:28:09.424884"
+        },
+        {
+          "suggestion_id": "9cfb2244",
+          "risk_point_id": "e4d13b7c",
+          "original_text": "技术服务合同 甲方：北京科技有限公司\n        乙方：上海技术服务中心\n        \n        第一条 服务内容\n        乙方为甲方提供技术开发服务。\n        \n        第二条 费用支付\n        甲方应在合同签订后 30 日内支付全部费用。\n        \n        第三条 价格调整\n        乙方有权根据市场情况随时调整服务价格，无需通知甲方。\n        \n        第四条 知识产权\n        服务过程中产生的所有知识产权归乙方所有。\n        \n        第五条 违约责任\n        甲方违约需承担无限连带责任，赔偿乙方一切损失。\n        \n        第六条 合同解除\n        乙方可随时解除本合同，无需承担任何责任。\n        \n        第七条 争议解决\n        本合同最终解释权归乙方所有。",
+          "suggested_text": "建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。",
+          "redline_type": "修改",
+          "level": "L4-智能 Redline",
+          "rationale": "原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益",
+          "legal_basis": [
+            {
+              "law_name": "《中华人民共和国民法典》",
+              "article": "第 543 条",
+              "content": "当事人协商一致，可以变更合同。",
+              "relevance": "合同变更需经双方协商一致，单方变更权违反该规定"
+            },
+            {
+              "law_name": "《中华人民共和国民法典》",
+              "article": "第 496 条",
+              "content": "格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。",
+              "relevance": "单方变更权条款可能构成无效格式条款"
+            }
+          ],
+          "market_benchmark": {
+            "industry": "通用",
+            "clause_type": "单方变更权",
+            "standard_practice": "遵循公平原则，保障双方合法权益",
+            "adoption_rate": 0.75,
+            "sample_clauses": []
+          },
+          "annotations": [
+            {
+              "start_pos": 0,
+              "end_pos": 422,
+              "annotation_type": "highlight",
+              "color": "yellow",
+              "comment": "建议修改"
+            }
+          ],
+          "confidence": 0.7,
+          "adoption_probability": 0.84,
+          "priority": "高",
+          "tags": [
+            "单方变更权"
+          ],
+          "created_at": "2026-03-06T05:28:09.424910"
+        },
+        {
+          "suggestion_id": "e3529584",
+          "risk_point_id": "82ce4e3a",
+          "original_text": "技术服务合同 甲方：北京科技有限公司\n        乙方：上海技术服务中心\n        \n        第一条 服务内容\n        乙方为甲方提供技术开发服务。\n        \n        第二条 费用支付\n        甲方应在合同签订后 30 日内支付全部费用。\n        \n        第三条 价格调整\n        乙方有权根据市场情况随时调整服务价格，无需通知甲方。\n        \n        第四条 知识产权\n        服务过程中产生的所有知识产权归乙方所有。\n        \n        第五条 违约责任\n        甲方违约需承担无限连带责任，赔偿乙方一切损失。\n        \n        第六条 合同解除\n        乙方可随时解除本合同，无需承担任何责任。\n        \n        第七条 争议解决\n        本合同最终解释权归乙方所有。",
+          "suggested_text": "建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。",
+          "redline_type": "修改",
+          "level": "L4-智能 Redline",
+          "rationale": "原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益",
+          "legal_basis": [
+            {
+              "law_name": "《中华人民共和国民法典》",
+              "article": "第 543 条",
+              "content": "当事人协商一致，可以变更合同。",
+              "relevance": "合同变更需经双方协商一致，单方变更权违反该规定"
+            },
+            {
+              "law_name": "《中华人民共和国民法典》",
+              "article": "第 496 条",
+              "content": "格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。",
+              "relevance": "单方变更权条款可能构成无效格式条款"
+            }
+          ],
+          "market_benchmark": {
+            "industry": "通用",
+            "clause_type": "单方变更权",
+            "standard_practice": "遵循公平原则，保障双方合法权益",
+            "adoption_rate": 0.75,
+            "sample_clauses": []
+          },
+          "annotations": [
+            {
+              "start_pos": 0,
+              "end_pos": 422,
+              "annotation_type": "highlight",
+              "color": "yellow",
+              "comment": "建议修改"
+            }
+          ],
+          "confidence": 0.7,
+          "adoption_probability": 0.84,
+          "priority": "高",
+          "tags": [
+            "单方变更权"
+          ],
+          "created_at": "2026-03-06T05:28:09.424934"
+        }
+      ],
+      "risk_level": "高",
+      "overall_suggestion": "甲方：北京科技有限公司\n        乙方：上海技术服务中心\n        \n        第一条 服务内容\n        乙方为甲方提供技术开发服务。\n        \n        第二条 费用支付\n        甲方应在合同签订后 30 日内支付全部费用。\n        \n        第三条 价格调整\n        乙方有权根据市场情况随时调整服务价格，无需通知甲方。\n        \n        第四条 知识产权\n        服务过程中产生的所有知识产权归乙方所有。\n        \n        第五条 违约责任\n        甲方违约需承担无限连带责任，赔偿乙方一切损失。\n        \n        第六条 合同解除\n        乙方可随时解除本合同，无需承担任何责任。\n        \n        第七条 争议解决\n        本合同最终解释权归乙方所有。"
+    }
+  ],
+  "executive_summary": "本合同共发现 6 处风险点，6 处为高风险（强烈建议修改）。 已生成 6 条 L4 级智能修改建议（含法律依据和市场基准），可直接采用。",
+  "overall_risk_assessment": "高风险：发现 6 处高风险条款，建议与对方协商修改后再签署。",
+  "key_recommendations": [
+    "【高】原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益...",
+    "【高】原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益...",
+    "【高】原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益...",
+    "【高】原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益...",
+    "【高】原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益..."
+  ],
+  "l4_adoption_rate": 1.0,
+  "all_suggestions": [
+    {
+      "suggestion_id": "47f8529f",
+      "risk_point_id": "746db2be",
+      "original_text": "技术服务合同 甲方：北京科技有限公司\n        乙方：上海技术服务中心\n        \n        第一条 服务内容\n        乙方为甲方提供技术开发服务。\n        \n        第二条 费用支付\n        甲方应在合同签订后 30 日内支付全部费用。\n        \n        第三条 价格调整\n        乙方有权根据市场情况随时调整服务价格，无需通知甲方。\n        \n        第四条 知识产权\n        服务过程中产生的所有知识产权归乙方所有。\n        \n        第五条 违约责任\n        甲方违约需承担无限连带责任，赔偿乙方一切损失。\n        \n        第六条 合同解除\n        乙方可随时解除本合同，无需承担任何责任。\n        \n        第七条 争议解决\n        本合同最终解释权归乙方所有。",
+      "suggested_text": "建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。",
+      "redline_type": "修改",
+      "level": "L4-智能 Redline",
+      "rationale": "原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益",
+      "legal_basis": [
+        {
+          "law_name": "《中华人民共和国民法典》",
+          "article": "第 543 条",
+          "content": "当事人协商一致，可以变更合同。",
+          "relevance": "合同变更需经双方协商一致，单方变更权违反该规定"
+        },
+        {
+          "law_name": "《中华人民共和国民法典》",
+          "article": "第 496 条",
+          "content": "格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。",
+          "relevance": "单方变更权条款可能构成无效格式条款"
+        }
+      ],
+      "market_benchmark": {
+        "industry": "通用",
+        "clause_type": "单方变更权",
+        "standard_practice": "遵循公平原则，保障双方合法权益",
+        "adoption_rate": 0.75,
+        "sample_clauses": []
+      },
+      "annotations": [
+        {
+          "start_pos": 0,
+          "end_pos": 422,
+          "annotation_type": "highlight",
+          "color": "yellow",
+          "comment": "建议修改"
+        }
+      ],
+      "confidence": 0.75,
+      "adoption_probability": 0.85,
+      "priority": "高",
+      "tags": [
+        "单方变更权"
+      ],
+      "created_at": "2026-03-06T05:28:09.424787"
+    },
+    {
+      "suggestion_id": "87850d57",
+      "risk_point_id": "9ab0a643",
+      "original_text": "技术服务合同 甲方：北京科技有限公司\n        乙方：上海技术服务中心\n        \n        第一条 服务内容\n        乙方为甲方提供技术开发服务。\n        \n        第二条 费用支付\n        甲方应在合同签订后 30 日内支付全部费用。\n        \n        第三条 价格调整\n        乙方有权根据市场情况随时调整服务价格，无需通知甲方。\n        \n        第四条 知识产权\n        服务过程中产生的所有知识产权归乙方所有。\n        \n        第五条 违约责任\n        甲方违约需承担无限连带责任，赔偿乙方一切损失。\n        \n        第六条 合同解除\n        乙方可随时解除本合同，无需承担任何责任。\n        \n        第七条 争议解决\n        本合同最终解释权归乙方所有。",
+      "suggested_text": "建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。",
+      "redline_type": "修改",
+      "level": "L4-智能 Redline",
+      "rationale": "原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益",
+      "legal_basis": [
+        {
+          "law_name": "《中华人民共和国民法典》",
+          "article": "第 543 条",
+          "content": "当事人协商一致，可以变更合同。",
+          "relevance": "合同变更需经双方协商一致，单方变更权违反该规定"
+        },
+        {
+          "law_name": "《中华人民共和国民法典》",
+          "article": "第 496 条",
+          "content": "格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。",
+          "relevance": "单方变更权条款可能构成无效格式条款"
+        }
+      ],
+      "market_benchmark": {
+        "industry": "通用",
+        "clause_type": "单方变更权",
+        "standard_practice": "遵循公平原则，保障双方合法权益",
+        "adoption_rate": 0.75,
+        "sample_clauses": []
+      },
+      "annotations": [
+        {
+          "start_pos": 0,
+          "end_pos": 422,
+          "annotation_type": "highlight",
+          "color": "yellow",
+          "comment": "建议修改"
+        }
+      ],
+      "confidence": 0.7999999999999999,
+      "adoption_probability": 0.86,
+      "priority": "高",
+      "tags": [
+        "单方变更权"
+      ],
+      "created_at": "2026-03-06T05:28:09.424826"
+    },
+    {
+      "suggestion_id": "b2889e39",
+      "risk_point_id": "2eb6e9fb",
+      "original_text": "技术服务合同 甲方：北京科技有限公司\n        乙方：上海技术服务中心\n        \n        第一条 服务内容\n        乙方为甲方提供技术开发服务。\n        \n        第二条 费用支付\n        甲方应在合同签订后 30 日内支付全部费用。\n        \n        第三条 价格调整\n        乙方有权根据市场情况随时调整服务价格，无需通知甲方。\n        \n        第四条 知识产权\n        服务过程中产生的所有知识产权归乙方所有。\n        \n        第五条 违约责任\n        甲方违约需承担无限连带责任，赔偿乙方一切损失。\n        \n        第六条 合同解除\n        乙方可随时解除本合同，无需承担任何责任。\n        \n        第七条 争议解决\n        本合同最终解释权归乙方所有。",
+      "suggested_text": "建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。",
+      "redline_type": "修改",
+      "level": "L4-智能 Redline",
+      "rationale": "原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益",
+      "legal_basis": [
+        {
+          "law_name": "《中华人民共和国民法典》",
+          "article": "第 543 条",
+          "content": "当事人协商一致，可以变更合同。",
+          "relevance": "合同变更需经双方协商一致，单方变更权违反该规定"
+        },
+        {
+          "law_name": "《中华人民共和国民法典》",
+          "article": "第 496 条",
+          "content": "格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。",
+          "relevance": "单方变更权条款可能构成无效格式条款"
+        }
+      ],
+      "market_benchmark": {
+        "industry": "通用",
+        "clause_type": "单方变更权",
+        "standard_practice": "遵循公平原则，保障双方合法权益",
+        "adoption_rate": 0.75,
+        "sample_clauses": []
+      },
+      "annotations": [
+        {
+          "start_pos": 0,
+          "end_pos": 422,
+          "annotation_type": "highlight",
+          "color": "yellow",
+          "comment": "建议修改"
+        }
+      ],
+      "confidence": 0.7,
+      "adoption_probability": 0.84,
+      "priority": "高",
+      "tags": [
+        "单方变更权"
+      ],
+      "created_at": "2026-03-06T05:28:09.424859"
+    },
+    {
+      "suggestion_id": "64bcb8ba",
+      "risk_point_id": "410684d7",
+      "original_text": "技术服务合同 甲方：北京科技有限公司\n        乙方：上海技术服务中心\n        \n        第一条 服务内容\n        乙方为甲方提供技术开发服务。\n        \n        第二条 费用支付\n        甲方应在合同签订后 30 日内支付全部费用。\n        \n        第三条 价格调整\n        乙方有权根据市场情况随时调整服务价格，无需通知甲方。\n        \n        第四条 知识产权\n        服务过程中产生的所有知识产权归乙方所有。\n        \n        第五条 违约责任\n        甲方违约需承担无限连带责任，赔偿乙方一切损失。\n        \n        第六条 合同解除\n        乙方可随时解除本合同，无需承担任何责任。\n        \n        第七条 争议解决\n        本合同最终解释权归乙方所有。",
+      "suggested_text": "建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。",
+      "redline_type": "修改",
+      "level": "L4-智能 Redline",
+      "rationale": "原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益",
+      "legal_basis": [
+        {
+          "law_name": "《中华人民共和国民法典》",
+          "article": "第 543 条",
+          "content": "当事人协商一致，可以变更合同。",
+          "relevance": "合同变更需经双方协商一致，单方变更权违反该规定"
+        },
+        {
+          "law_name": "《中华人民共和国民法典》",
+          "article": "第 496 条",
+          "content": "格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。",
+          "relevance": "单方变更权条款可能构成无效格式条款"
+        }
+      ],
+      "market_benchmark": {
+        "industry": "通用",
+        "clause_type": "单方变更权",
+        "standard_practice": "遵循公平原则，保障双方合法权益",
+        "adoption_rate": 0.75,
+        "sample_clauses": []
+      },
+      "annotations": [
+        {
+          "start_pos": 0,
+          "end_pos": 422,
+          "annotation_type": "highlight",
+          "color": "yellow",
+          "comment": "建议修改"
+        }
+      ],
+      "confidence": 0.7,
+      "adoption_probability": 0.84,
+      "priority": "高",
+      "tags": [
+        "单方变更权"
+      ],
+      "created_at": "2026-03-06T05:28:09.424884"
+    },
+    {
+      "suggestion_id": "9cfb2244",
+      "risk_point_id": "e4d13b7c",
+      "original_text": "技术服务合同 甲方：北京科技有限公司\n        乙方：上海技术服务中心\n        \n        第一条 服务内容\n        乙方为甲方提供技术开发服务。\n        \n        第二条 费用支付\n        甲方应在合同签订后 30 日内支付全部费用。\n        \n        第三条 价格调整\n        乙方有权根据市场情况随时调整服务价格，无需通知甲方。\n        \n        第四条 知识产权\n        服务过程中产生的所有知识产权归乙方所有。\n        \n        第五条 违约责任\n        甲方违约需承担无限连带责任，赔偿乙方一切损失。\n        \n        第六条 合同解除\n        乙方可随时解除本合同，无需承担任何责任。\n        \n        第七条 争议解决\n        本合同最终解释权归乙方所有。",
+      "suggested_text": "建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。",
+      "redline_type": "修改",
+      "level": "L4-智能 Redline",
+      "rationale": "原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益",
+      "legal_basis": [
+        {
+          "law_name": "《中华人民共和国民法典》",
+          "article": "第 543 条",
+          "content": "当事人协商一致，可以变更合同。",
+          "relevance": "合同变更需经双方协商一致，单方变更权违反该规定"
+        },
+        {
+          "law_name": "《中华人民共和国民法典》",
+          "article": "第 496 条",
+          "content": "格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。",
+          "relevance": "单方变更权条款可能构成无效格式条款"
+        }
+      ],
+      "market_benchmark": {
+        "industry": "通用",
+        "clause_type": "单方变更权",
+        "standard_practice": "遵循公平原则，保障双方合法权益",
+        "adoption_rate": 0.75,
+        "sample_clauses": []
+      },
+      "annotations": [
+        {
+          "start_pos": 0,
+          "end_pos": 422,
+          "annotation_type": "highlight",
+          "color": "yellow",
+          "comment": "建议修改"
+        }
+      ],
+      "confidence": 0.7,
+      "adoption_probability": 0.84,
+      "priority": "高",
+      "tags": [
+        "单方变更权"
+      ],
+      "created_at": "2026-03-06T05:28:09.424910"
+    },
+    {
+      "suggestion_id": "e3529584",
+      "risk_point_id": "82ce4e3a",
+      "original_text": "技术服务合同 甲方：北京科技有限公司\n        乙方：上海技术服务中心\n        \n        第一条 服务内容\n        乙方为甲方提供技术开发服务。\n        \n        第二条 费用支付\n        甲方应在合同签订后 30 日内支付全部费用。\n        \n        第三条 价格调整\n        乙方有权根据市场情况随时调整服务价格，无需通知甲方。\n        \n        第四条 知识产权\n        服务过程中产生的所有知识产权归乙方所有。\n        \n        第五条 违约责任\n        甲方违约需承担无限连带责任，赔偿乙方一切损失。\n        \n        第六条 合同解除\n        乙方可随时解除本合同，无需承担任何责任。\n        \n        第七条 争议解决\n        本合同最终解释权归乙方所有。",
+      "suggested_text": "建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。",
+      "redline_type": "修改",
+      "level": "L4-智能 Redline",
+      "rationale": "原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益",
+      "legal_basis": [
+        {
+          "law_name": "《中华人民共和国民法典》",
+          "article": "第 543 条",
+          "content": "当事人协商一致，可以变更合同。",
+          "relevance": "合同变更需经双方协商一致，单方变更权违反该规定"
+        },
+        {
+          "law_name": "《中华人民共和国民法典》",
+          "article": "第 496 条",
+          "content": "格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。",
+          "relevance": "单方变更权条款可能构成无效格式条款"
+        }
+      ],
+      "market_benchmark": {
+        "industry": "通用",
+        "clause_type": "单方变更权",
+        "standard_practice": "遵循公平原则，保障双方合法权益",
+        "adoption_rate": 0.75,
+        "sample_clauses": []
+      },
+      "annotations": [
+        {
+          "start_pos": 0,
+          "end_pos": 422,
+          "annotation_type": "highlight",
+          "color": "yellow",
+          "comment": "建议修改"
+        }
+      ],
+      "confidence": 0.7,
+      "adoption_probability": 0.84,
+      "priority": "高",
+      "tags": [
+        "单方变更权"
+      ],
+      "created_at": "2026-03-06T05:28:09.424934"
+    }
+  ],
+  "export_info": {
+    "exported_at": "2026-03-06T05:28:09.425179",
+    "export_format": "json",
+    "version": "1.0"
+  }
+}

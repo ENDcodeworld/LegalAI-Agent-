@@ -163,8 +163,9 @@ class TestSmartRedlineGenerator(unittest.TestCase):
         ]
         
         for text, expected_type in test_cases:
+            # 使用字符串而非枚举，以便测试基于文本的识别
             risk_point = RiskPoint(
-                risk_type=RiskType.UNFAIR_CLAUSE,
+                risk_type="UNKNOWN",  # 使用字符串强制基于文本识别
                 risk_level=RiskLevel.HIGH,
                 clause_title="测试条款",
                 risk_content="测试",

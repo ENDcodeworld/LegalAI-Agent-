@@ -94,6 +94,15 @@ class SmartRedlineGenerator:
                     "因本合同引起的争议，提交合同履行地仲裁委员会按照其仲裁规则进行仲裁。"
                 ]
             },
+            "最终解释权": {
+                "industry": "通用",
+                "standard_practice": "合同解释权应由双方共同享有，或按照法律规定进行解释",
+                "adoption_rate": 0.95,
+                "sample_clauses": [
+                    "本合同的解释权由甲乙双方共同享有。",
+                    "对本合同条款的理解有争议的，应当按照合同所使用的词句、合同的有关条款、合同的目的、交易习惯以及诚实信用原则，确定该条款的真实意思。"
+                ]
+            },
             "保密条款": {
                 "industry": "通用",
                 "standard_practice": "保密期限通常为 2-5 年，不应永久保密",
@@ -326,21 +335,15 @@ class SmartRedlineGenerator:
     
     def _identify_risk_type(self, risk_point) -> str:
         """识别风险类型"""
-        # 从风险点对象中提取风险类型
-        if hasattr(risk_point, 'risk_type'):
-            risk_type = risk_point.risk_type
-            if hasattr(risk_type, 'value'):
-                return risk_type.value
-            return str(risk_type)
-        
-        # 从风险内容中推断
+        # 从风险内容中推断（优先基于文本识别）
         text = risk_point.original_text + " " + getattr(risk_point, 'risk_content', '')
         
-        if any(kw in text for kw in ["单方", "任意", "无需通知", "保留变更"]):
+        # 单方变更权：包含"单方"、"随时"、"任意"、"无需通知"、"保留变更"等
+        if any(kw in text for kw in ["单方", "随时", "任意", "无需通知", "保留变更", "有权随时"]):
             return "单方变更权"
         elif any(kw in text for kw in ["最终解释权", "解释权归"]):
             return "最终解释权"
-        elif any(kw in text for kw in ["无限责任", "一切损失", "全部损失"]):
+        elif any(kw in text for kw in ["无限责任", "一切损失", "全部损失", "连带责任"]):
             return "无限责任"
         elif any(kw in text for kw in ["适当", "合理", "及时", "相关"]):
             return "模糊表述"
@@ -348,8 +351,17 @@ class SmartRedlineGenerator:
             return "违约金过高"
         elif any(kw in text for kw in ["永久", "长期"]):
             return "保密期限过长"
-        elif any(kw in text for kw in ["单方解除", "随时解除"]):
+        elif any(kw in text for kw in ["单方解除", "随时解除", "随时解除"]):
             return "单方解除权"
+        
+        # 如果没有从文本中识别出具体类型，再使用 risk_type 属性
+        if hasattr(risk_point, 'risk_type'):
+            risk_type = risk_point.risk_type
+            if hasattr(risk_type, 'value'):
+                rt_value = risk_type.value
+                # 如果是具体的风险类型，返回它
+                if rt_value not in ["其他", "未知", "UNKNOWN"]:
+                    return rt_value
         
         return "其他风险"
     
@@ -431,8 +443,8 @@ class SmartRedlineGenerator:
                 rationale = f"原条款要求承担无限责任，违反《民法典》第 584 条关于可预见损失的规定。建议设置合理赔偿上限。"
             
             elif risk_type == "最终解释权":
-                suggested_text = "（建议删除该条款）"
-                rationale = f"'最终解释权归甲方所有'属于无效格式条款，违反《民法典》第 497 条和《消费者权益保护法》第 26 条。"
+                suggested_text = "建议删除该条款，或修改为：本合同的解释权由甲乙双方共同享有，对合同条款的理解有争议的，应当按照合同所使用的词句、合同的有关条款、合同的目的、交易习惯以及诚实信用原则，确定该条款的真实意思。"
+                rationale = f"'最终解释权归甲方所有'属于无效格式条款，违反《民法典》第 497 条和《消费者权益保护法》第 26 条。{market_benchmark.standard_practice if market_benchmark else ''}"
             
             elif risk_type == "模糊表述":
                 # 提取模糊词

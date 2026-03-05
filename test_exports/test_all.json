@@ -1,0 +1,129 @@
+{
+  "report_id": "69ff5e95-7c7",
+  "contract_id": "bc7bf236-f06",
+  "contract_name": "买卖合同",
+  "generated_at": "2026-03-06T05:28:09.404741",
+  "total_suggestions": 1,
+  "suggestions_by_level": {
+    "L4-智能 Redline": 1
+  },
+  "suggestions_by_priority": {
+    "高": 1
+  },
+  "clause_redlines": [
+    {
+      "clause_id": "ab217689",
+      "clause_title": "买卖合同",
+      "clause_content": "第一条 甲方有权随时调整价格。\n        第二条 最终解释权归甲方。",
+      "suggestions": [
+        {
+          "suggestion_id": "080ce122",
+          "risk_point_id": "979f32f8",
+          "original_text": "买卖合同 第一条 甲方有权随时调整价格。\n        第二条 最终解释权归甲方。",
+          "suggested_text": "建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。",
+          "redline_type": "修改",
+          "level": "L4-智能 Redline",
+          "rationale": "原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益",
+          "legal_basis": [
+            {
+              "law_name": "《中华人民共和国民法典》",
+              "article": "第 543 条",
+              "content": "当事人协商一致，可以变更合同。",
+              "relevance": "合同变更需经双方协商一致，单方变更权违反该规定"
+            },
+            {
+              "law_name": "《中华人民共和国民法典》",
+              "article": "第 496 条",
+              "content": "格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。",
+              "relevance": "单方变更权条款可能构成无效格式条款"
+            }
+          ],
+          "market_benchmark": {
+            "industry": "通用",
+            "clause_type": "单方变更权",
+            "standard_practice": "遵循公平原则，保障双方合法权益",
+            "adoption_rate": 0.75,
+            "sample_clauses": []
+          },
+          "annotations": [
+            {
+              "start_pos": 0,
+              "end_pos": 42,
+              "annotation_type": "highlight",
+              "color": "yellow",
+              "comment": "建议修改"
+            }
+          ],
+          "confidence": 0.7999999999999999,
+          "adoption_probability": 0.86,
+          "priority": "高",
+          "tags": [
+            "单方变更权"
+          ],
+          "created_at": "2026-03-06T05:28:09.404610"
+        }
+      ],
+      "risk_level": "高",
+      "overall_suggestion": "第一条 甲方有权随时调整价格。\n        第二条 最终解释权归甲方。"
+    }
+  ],
+  "executive_summary": "本合同共发现 1 处风险点，1 处为高风险（强烈建议修改）。 已生成 1 条 L4 级智能修改建议（含法律依据和市场基准），可直接采用。",
+  "overall_risk_assessment": "中风险：发现少量高风险条款，建议关注并酌情修改。",
+  "key_recommendations": [
+    "【高】原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益..."
+  ],
+  "l4_adoption_rate": 1.0,
+  "all_suggestions": [
+    {
+      "suggestion_id": "080ce122",
+      "risk_point_id": "979f32f8",
+      "original_text": "买卖合同 第一条 甲方有权随时调整价格。\n        第二条 最终解释权归甲方。",
+      "suggested_text": "建议修改为：价格/条款调整需经双方书面协商一致，并提前 30 日通知对方。未经协商一致，任何一方不得单方变更。",
+      "redline_type": "修改",
+      "level": "L4-智能 Redline",
+      "rationale": "原条款赋予一方单方变更权，违反《民法典》第 543 条关于合同变更需协商一致的规定。遵循公平原则，保障双方合法权益",
+      "legal_basis": [
+        {
+          "law_name": "《中华人民共和国民法典》",
+          "article": "第 543 条",
+          "content": "当事人协商一致，可以变更合同。",
+          "relevance": "合同变更需经双方协商一致，单方变更权违反该规定"
+        },
+        {
+          "law_name": "《中华人民共和国民法典》",
+          "article": "第 496 条",
+          "content": "格式条款是当事人为了重复使用而预先拟定，并在订立合同时未与对方协商的条款。",
+          "relevance": "单方变更权条款可能构成无效格式条款"
+        }
+      ],
+      "market_benchmark": {
+        "industry": "通用",
+        "clause_type": "单方变更权",
+        "standard_practice": "遵循公平原则，保障双方合法权益",
+        "adoption_rate": 0.75,
+        "sample_clauses": []
+      },
+      "annotations": [
+        {
+          "start_pos": 0,
+          "end_pos": 42,
+          "annotation_type": "highlight",
+          "color": "yellow",
+          "comment": "建议修改"
+        }
+      ],
+      "confidence": 0.7999999999999999,
+      "adoption_probability": 0.86,
+      "priority": "高",
+      "tags": [
+        "单方变更权"
+      ],
+      "created_at": "2026-03-06T05:28:09.404610"
+    }
+  ],
+  "export_info": {
+    "exported_at": "2026-03-06T05:28:09.404806",
+    "export_format": "json",
+    "version": "1.0"
+  }
+}

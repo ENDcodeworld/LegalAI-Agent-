@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 # 添加路径
-risk_ai_path = Path(__file__).parent.parent / "src" / "risk_ai"
+risk_ai_path = Path('/home/admin/.openclaw/workspace/LegalAI-Agent/src/risk_ai')
 sys.path.insert(0, str(risk_ai_path))
 
 # 导入风险类型
