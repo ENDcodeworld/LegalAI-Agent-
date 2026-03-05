@@ -1,0 +1,1 @@
+# LegalAI Generator Module

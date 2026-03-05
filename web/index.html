@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegalAI - 智能合同审阅系统 | 让 AI 成为你的 24/7 法务顾问</title>
+    <meta name="description" content="LegalAI 智能合同审阅系统，5 分钟完成合同风险分析，准确率 90%+，帮助律所和企业提升 5 倍效率">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .btn {
+            background: white;
+            color: #667eea;
+            padding: 10px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        /* Features */
+        .features {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 0;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .pricing-card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid #667eea;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .price {
+            font-size: 48px;
+            color: #667eea;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .price span {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .pricing-features li:before {
+            content: "✅ ";
+            margin-right: 10px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+        }
+        
+        .testimonial-card {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .testimonial-card blockquote {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        /* CTA */
+        .cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            opacity: 0.8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">⚖️ LegalAI</div>
+                <div class="nav-links">
+                    <a href="#features">功能</a>
+                    <a href="#how-it-works">如何使用</a>
+                    <a href="#pricing">价格</a>
+                    <a href="#testimonials">客户评价</a>
+                </div>
+                <a href="#contact" class="btn">免费试用</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>让 AI 成为你的 24/7 法务顾问</h1>
+            <p>智能合同审阅系统 · 5 分钟完成风险分析 · 准确率 90%+</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">🚀 免费试用 3 份合同</a>
+                <a href="#features" class="btn">了解更多</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">为什么选择 LegalAI？</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>效率提升 5 倍</h3>
+                    <p>传统审阅 2 小时 → AI 辅助 5 分钟，让律师从重复工作中解放，专注高价值服务。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>准确率 90%+</h3>
+                    <p>基于规则引擎 + AI 大模型双重检测，风险识别准确率接近资深律师水平。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>成本降低 90%</h3>
+                    <p>相比传统律所人工审阅，费用从¥5000/份降至¥200/份，普惠中小企业。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3>多类型合同支持</h3>
+                    <p>买卖合同、租赁合同、劳动合同、投资协议、合作协议等 20+ 种合同类型。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>数据安全保密</h3>
+                    <p>银行级加密传输，支持私有化部署，确保客户合同数据不外泄。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>可视化风险报告</h3>
+                    <p>自动生成风险评级、修改建议、法律依据引用，支持 PDF 导出。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">如何使用 LegalAI？</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>上传合同</h3>
+                    <p>支持 PDF、Word、TXT 格式，拖拽上传或复制粘贴文本</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>AI 分析</h3>
+                    <p>5 分钟内自动识别风险条款、缺失条款、模糊表述</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>查看报告</h3>
+                    <p>查看详细风险分析、修改建议、法律依据引用</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>导出交付</h3>
+                    <p>一键导出 PDF 审阅报告，直接发送给客户</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">灵活定价，按需选择</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>体验版</h3>
+                    <div class="price">¥0<span>/月</span></div>
+                    <ul class="pricing-features">
+                        <li>每月 3 份合同审阅</li>
+                        <li>基础风险识别</li>
+                        <li>标准报告导出</li>
+                        <li>邮件支持</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">立即试用</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div style="position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:#667eea;color:white;padding:5px 20px;border-radius:15px;font-size:14px;">最受欢迎</div>
+                    <h3>专业版</h3>
+                    <div class="price">¥2,980<span>/月</span></div>
+                    <ul class="pricing-features">
+                        <li>每月 60 份合同审阅</li>
+                        <li>高级风险识别 + AI 建议</li>
+                        <li>自定义报告模板</li>
+                        <li>优先技术支持</li>
+                        <li>API 接入</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">开始使用</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>企业版</h3>
+                    <div class="price">¥9,800<span>/月</span></div>
+                    <ul class="pricing-features">
+                        <li>每月 300 份合同审阅</li>
+                        <li>私有化部署</li>
+                        <li>定制风险规则</li>
+                        <li>专属客户经理</li>
+                        <li>SLA 服务保障</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">联系销售</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">客户怎么说</h2>
+            <div class="testimonial-card">
+                <blockquote>"LegalAI 彻底改变了我们的合同审阅流程。以前需要 2 小时的工作，现在 5 分钟完成，而且准确率更高。律师可以把时间花在更有价值的客户服务上。"</blockquote>
+                <div class="testimonial-author">— 张律师，某红圈所合伙人</div>
+            </div>
+            <div class="testimonial-card">
+                <blockquote>"引入 LegalAI 后，我们法务团队 2 个人可以处理以前 3 个人的工作量，而且响应速度更快，业务部门满意度大幅提升。"</blockquote>
+                <div class="testimonial-author">— 李总，某科技公司法务总监</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="cta">
+        <div class="container">
+            <h2>准备好提升律所效率了吗？</h2>
+            <p>立即免费试用，体验 AI 驱动的合同审阅</p>
+            <div style="margin-top: 40px;">
+                <a href="mailto:431819350@qq.com" class="btn btn-primary" style="font-size: 18px; padding: 15px 40px;">📧 联系试用</a>
+                <p style="margin-top: 20px; opacity: 0.8;">邮箱：431819350@qq.com | 微信：待添加</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 LegalAI - 智能合同审阅系统</p>
+            <p style="margin-top: 10px; font-size: 14px;">让 AI 真正服务于法律行业</p>
+        </div>
+    </footer>
+</body>
+</html>
