@@ -18,6 +18,7 @@ from .models import (
     LegalBasis
 )
 from .redline_generator import SmartRedlineGenerator
+from .report_exporter import RedlineReportExporter
 
 __all__ = [
     'RedlineSuggestion',
@@ -25,7 +26,8 @@ __all__ = [
     'RedlineReport',
     'MarketBenchmark',
     'LegalBasis',
-    'SmartRedlineGenerator'
+    'SmartRedlineGenerator',
+    'RedlineReportExporter'
 ]
 
 __version__ = '1.0.0'
